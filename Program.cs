@@ -54,4 +54,11 @@ class Program
         }
     }
 
+    class Dragao : Criatura
+    {
+
+        public int Furia { get; set; }
+        
+    }
+
 }
