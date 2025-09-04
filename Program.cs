@@ -9,22 +9,49 @@ class Program
 
     }
      
-public abstract class Criatura
-{
-    public string nome {get; set;}
-    public int vida {get; set;}
-    public int ataque {get; set;}
-    public int defesa {get; set;}
-
-    public virtual void atacar ()
+    public abstract class Criatura
     {
+        public string Nome {get; set;}
+        public int Vida {get; set;}
+        public int Ataque {get; set;}
+        public int Defesa {get; set;}
 
+        public virtual void Atacar (int Ataque)
+        {
+
+        }
+
+        public void ReceberDano(int Dano)
+        {
+            int Dano = Ataque - Defesa 
+        }
     }
 
-    public void receberDano(int dano)
+    class CapivaraGuerreiro : Criatura
     {
-        int dano = ataque - defesa 
+        public override void Atacar()
+        {
+
+        }
     }
-}
+
+    class CapivaraMago : Criatura
+    {
+
+        public int Mana { get; set; }
+
+        public override void Atacar()
+        {
+
+        }
+    }
+
+    class CapivaraArqueira : Criatura
+    {
+        public override void Atacar()
+        {
+
+        }
+    }
 
 }
